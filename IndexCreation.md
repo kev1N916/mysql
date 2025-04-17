@@ -80,3 +80,10 @@ Extra: NULL
 
 This column provides additional information about how MySQL is executing the query. NULL in this case means there's no extra information to report, which is often the case for simple indexed lookups.
 
+
+Lets see what happens when we drop the index and then explain the same SELECT Statement:
+
+![alt text](image-4.png)
+
+As you can see now we are not using any index during the select and we are scanning through all the rows.
+
